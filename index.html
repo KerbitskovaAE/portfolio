@@ -1,64 +1,162 @@
-<div class="value">ERP, LIMS, MES, CRM, автоматизация бизнес-процессов, интеграция систем, дашборды, отчетность</div>
-                </div>
-                <div class="skill-card">
-                    <div class="label">Business Analysis</div>
-                    <div class="value">Сбор требований, ТЗ, User Story, Acceptance Criteria, матрица рисков, КТК</div>
-                </div>
-                <div class="skill-card">
-                    <div class="label">Управление проектами</div>
-                    <div class="value">Agile, Scrum, Kanban, Waterfall, MS Project, Jira, Confluence</div>
-                </div>
-                <div class="skill-card">
-                    <div class="label">Предметная область</div>
-                    <div class="value">Строительство, девелопмент, модульное домостроение, производство, R&D</div>
-                </div>
-                <div class="skill-card">
-                    <div class="label">Качество</div>
-                    <div class="value">ISO 9001, ГОСТ, ТР ТС, CAPA, PDCA, бережливое производство</div>
-                </div>
-            </div>
-        </section>
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Анна Кербицкова — Портфолио</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--muted:#86868b;--border:#e5e5ea;--accent:#0071e3;--accent-bg:#e8f0fe;--header:#1d1d1f;--header-text:#fff}
+[data-theme="dark"]{--bg:#000;--card:#1c1c1e;--text:#f5f5f7;--muted:#6e6e73;--border:#2c2c2e;--accent:#0a84ff;--accent-bg:#1a2a3a;--header:#1c1c1e;--header-text:#f5f5f7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:40px 20px;transition:background .3s,color .3s}
+.container{max-width:900px;margin:0 auto}
+.theme-toggle{position:fixed;top:20px;right:20px;width:48px;height:48px;border-radius:50%;border:none;background:var(--card);color:var(--text);font-size:1.4rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15);z-index:1000;transition:transform .2s}
+.theme-toggle:hover{transform:scale(1.1)}
+header{background:var(--header);color:var(--header-text);padding:48px 40px;border-radius:16px;margin-bottom:24px}
+header h1{font-size:2.2rem;font-weight:700;margin-bottom:8px}
+header .role{font-size:1.1rem;color:#a1a1a6;margin-bottom:16px}
+header .loc{font-size:.9rem;color:#a1a1a6}
+section{background:var(--card);border-radius:16px;padding:32px 40px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+h2{font-size:1.4rem;font-weight:700;margin-bottom:20px}
+h2::after{content:'';display:block;width:48px;height:3px;background:var(--accent);margin-top:8px;border-radius:2px}
+.about{font-size:1rem;color:#424245;margin-bottom:20px}
+[data-theme="dark"] .about{color:#a1a1a6}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--bg);border-radius:12px;padding:16px 18px}
+.card .label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin-bottom:6px}
+.card .val{font-size:.95rem;font-weight:500}
+.contact{display:flex;align-items:flex-start;gap:12px;background:var(--bg);border-radius:12px;padding:16px 18px}
+.contact .icon{font-size:1.4rem}
+.contact .label{font-size:.75rem;font-weight:600;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.contact .val{font-size:.95rem;font-weight:500;word-break:break-word}
+.contact .val a{color:var(--accent);text-decoration:none}
+.contact .val a:hover{text-decoration:underline}
+.project{border-bottom:1px solid var(--border);padding-bottom:22px;margin-bottom:22px}
+.project:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0}
+.ph{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-bottom:4px}
+.pt{font-size:1.05rem;font-weight:600}
+.pm{font-size:.85rem;color:var(--muted)}
+.pc{font-size:.95rem;color:var(--accent);font-weight:500;margin-bottom:12px}
+.pb{margin-bottom:10px}
+.pb .lbl{font-size:.75rem;font-weight:600;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.pb p,.pb li{font-size:.93rem;color:#424245}
+[data-theme="dark"] .pb p,[data-theme="dark"] .pb li{color:#a1a1a6}
+.pb ul{list-style:none}
+.pb li{padding-left:18px;position:relative;margin-bottom:3px}
+.pb li::before{content:'—';position:absolute;left:0;color:var(--accent);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{background:var(--accent-bg);color:var(--accent);font-size:.75rem;font-weight:500;padding:3px 10px;border-radius:20px}
+.course{font-size:.93rem;color:#424245;padding-left:18px;position:relative;margin-bottom:4px}
+.course::before{content:'—';position:absolute;left:0;color:var(--accent);font-weight:600}
+[data-theme="dark"] .course{color:#a1a1a6}
+footer{text-align:center;padding:20px 0;font-size:.85rem;color:var(--muted)}
+@media(max-width:640px){header{padding:32px 24px}header h1{font-size:1.6rem}section{padding:24px 20px}.theme-toggle{top:12px;right:12px;width:42px;height:42px;font-size:1.2rem}}
+</style>
+</head>
+<body>
+<button class="theme-toggle" id="tt" aria-label="Тема">🌙</button>
+<div class="container">
 
-        <!-- Footer -->
-        <footer>
-            <p>Анна Кербицкова · Портфолио · 2026</p>
-        </footer>
+<header>
+<h1>Анна Кербицкова</h1>
+<p class="role">Business Analyst / Product Owner / IT Project Manager<br>Construction Tech · ERP · Industry 4.0</p>
+<p class="loc">📍 Серпухов, Московская область · ✈️ Удаленка, переезд в Москву, командировки</p>
+</header>
 
-    </div>
+<section>
+<h2>Контакты</h2>
+<div class="grid">
+<div class="contact"><div class="icon">📞</div><div><div class="label">Телефон</div><div class="val"><a href="tel:+79773347200">+7 (977) 334-72-00</a></div></div></div>
+<div class="contact"><div class="icon">✉️</div><div><div class="label">Email</div><div class="val"><a href="mailto:zannek@mail.ru">zannek@mail.ru</a></div></div></div>
+<div class="contact"><div class="icon">📍</div><div><div class="label">Регион</div><div class="val">Серпухов, МО</div></div></div>
+<div class="contact"><div class="icon">✈️</div><div><div class="label">Готовность</div><div class="val">Удаленка · Москва · Командировки</div></div></div>
+</div>
+</section>
 
-    <script>
-        (function () {
-            const toggle = document.getElementById('themeToggle');
-            const html = document.documentElement;
-            const STORAGE_KEY = 'portfolio-theme';
+<section>
+<h2>Обо мне</h2>
+<p class="about">Эксперт с 13-летним опытом выстраивания систем управления качеством, автоматизации бизнес-процессов и запуска производственных R&D-проектов. Специализируюсь на стыке IT и строительства: внедряю ERP, LIMS, MES, управляю требованиями и выстраиваю процессы с нуля.</p>
+<div class="grid">
+<div class="card"><div class="label">Business Analysis</div><div class="val">Сбор требований, ТЗ, User Story</div></div>
+<div class="card"><div class="label">IT-проекты</div><div class="val">ERP, LIMS, MES, CRM</div></div>
+<div class="card"><div class="label">Автоматизация</div><div class="val">Отчетность, документооборот</div></div>
+<div class="card"><div class="label">Методологии</div><div class="val">Agile, Scrum, Kanban</div></div>
+</div>
+</section>
 
-            // Восстанавливаем сохранённую тему
-            const savedTheme = localStorage.getItem(STORAGE_KEY);
-            if (savedTheme) {
-                html.setAttribute('data-theme', savedTheme);
-                updateIcon(savedTheme);
-            } else {
-                // Если нет сохранённой — используем системную
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const initialTheme = prefersDark ? 'dark' : 'light';
-                html.setAttribute('data-theme', initialTheme);
-                updateIcon(initialTheme);
-            }
+<section>
+<h2>Проекты</h2>
 
-            // Обработчик клика
-            toggle.addEventListener('click', function () {
-                const current = html.getAttribute('data-theme');
-                const next = current === 'dark' ? 'light' : 'dark';
-                html.setAttribute('data-theme', next);
-                localStorage.setItem(STORAGE_KEY, next);
-                updateIcon(next);
-            });
+<div class="project">
+<div class="ph"><div class="pt">Внедрение ERP для контроля качества</div><div class="pm">2023 — 2026</div></div>
+<div class="pc">ГК ПИК · Product Owner / Business Analyst</div>
+<div class="pb"><div class="lbl">Задача</div><p>Автоматизировать процессы контроля качества и отчетности на всем жизненном цикле проекта.</p></div>
+<div class="pb"><div class="lbl">Действия</div><ul><li>Собрала требования от stakeholders, сформировала ТЗ и дорожную карту.</li><li>Выступила в роли product owner: ставила задачи IT-команде, принимала результат.</li><li>Настроила отчетность, дашборды, интеграцию ERP с LIMS и MES.</li></ul></div>
+<div class="pb"><div class="lbl">Результат</div><ul><li>Запуск ERP с нуля.</li><li>100% прослеживаемость требований от ТЗ до исполнительной схемы.</li><li>Прозрачность данных для руководства.</li></ul></div>
+<div class="tags"><span class="tag">Business Analysis</span><span class="tag">Product Owner</span><span class="tag">ERP</span><span class="tag">ТЗ</span></div>
+</div>
 
-            function updateIcon(theme) {
-                toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
-            }
-        })();
-    </script>
+<div class="project">
+<div class="ph"><div class="pt">Интеграция СМК с IT-системами на заводе модульного домостроения</div><div class="pm">2020 — 2022</div></div>
+<div class="pc">ПИК (modul.tech) · Руководитель проектов по качеству</div>
+<div class="pb"><div class="lbl">Задача</div><p>Запустить первый в РФ завод модульного домостроения и выстроить СМК с нуля.</p></div>
+<div class="pb"><div class="lbl">Действия</div><ul><li>Интегрировала СМК с LIMS, MES и ERP-системами.</li><li>Настроила сбор и анализ данных о качестве.</li><li>Запустила «Школу мастеров качества».</li></ul></div>
+<div class="pb"><div class="lbl">Результат</div><ul><li>За 3 месяца — развертывание производства.</li><li>100% целевых показателей качества.</li><li>Снижение ошибок «человеческого фактора».</li></ul></div>
+<div class="tags"><span class="tag">LIMS</span><span class="tag">MES</span><span class="tag">ERP</span><span class="tag">СМК</span></div>
+</div>
 
+<div class="project">
+<div class="ph"><div class="pt">Автоматизация риск-менеджмента и мониторинга подрядчиков</div><div class="pm">2023 — 2026</div></div>
+<div class="pc">ГК ПИК · Руководитель проектов по качеству</div>
+<div class="pb"><div class="lbl">Задача</div><p>Выстроить риск-ориентированный подход и автоматизировать мониторинг подрядчиков через CAPA.</p></div>
+<div class="pb"><div class="lbl">Действия</div><ul><li>Внедрила ISO 9001, создала матрицу рисков и КТК.</li><li>Автоматизировала мониторинг подрядчиков через CAPA.</li><li>Настроила KPI для подрядчиков.</li></ul></div>
+<div class="pb"><div class="lbl">Результат</div><ul><li>100% прослеживаемость требований.</li><li>Сокращение дефектов на приемке.</li><li>Единые стандарты в договорах.</li></ul></div>
+<div class="tags"><span class="tag">Риск-менеджмент</span><span class="tag">CAPA</span><span class="tag">ISO 9001</span><span class="tag">KPI</span></div>
+</div>
+
+<div class="project">
+<div class="ph"><div class="pt">Управление продуктом в R&D</div><div class="pm">2023 — 2026</div></div>
+<div class="pc">ГК ПИК · Руководитель отдела технического контроля</div>
+<div class="pb"><div class="lbl">Задача</div><p>Обеспечить полный цикл контроля качества при внедрении новых строительных технологий.</p></div>
+<div class="pb"><div class="lbl">Действия</div><ul><li>Контроль концепций, опытных образцов, технологий производства.</li><li>Объединила проектирование, производство и стройку в единый контур качества.</li><li>Настроила операционный и выходной контроль серийных деталей.</li></ul></div>
+<div class="pb"><div class="lbl">Результат</div><ul><li>Сокращение затрат на переделки на 40%.</li><li>Стабильность технологических параметров.</li><li>Кросс-функциональная интеграция команд.</li></ul></div>
+<div class="tags"><span class="tag">R&D</span><span class="tag">Управление продуктом</span><span class="tag">Контроль качества</span></div>
+</div>
+
+</section>
+
+<section>
+<h2>Образование и курсы</h2>
+<div class="pb"><div class="lbl">Бакалавр · 2017</div><p>Московский политехнический университет — Машиностроение, Метрология, стандартизация и сертификация</p></div>
+<div class="pb"><div class="lbl">Повышение квалификации</div>
+<div class="course">2026 — MINI-MBA: Управление финансами для руководителей, РЭУ им. Г.В. Плеханова</div>
+<div class="course">НОСТРОЙ — Информационные технологии в строительстве</div>
+<div class="course">Валидация/Верификация процессов</div>
+</div>
+</section>
+
+<section>
+<h2>Навыки</h2>
+<div class="grid">
+<div class="card"><div class="label">IT и автоматизация</div><div class="val">ERP, LIMS, MES, CRM, интеграция систем, дашборды</div></div>
+<div class="card"><div class="label">Business Analysis</div><div class="val">Сбор требований, ТЗ, User Story, матрица рисков, КТК</div></div>
+<div class="card"><div class="label">Управление проектами</div><div class="val">Agile, Scrum, Kanban, MS Project, Jira</div></div>
+<div class="card"><div class="label">Предметная область</div><div class="val">Строительство, девелопмент, производство, R&D</div></div>
+<div class="card"><div class="label">Качество</div><div class="val">ISO 9001, ГОСТ, ТР ТС, CAPA, PDCA</div></div>
+</div>
+</section>
+
+<footer>Анна Кербицкова · Портфолио · 2026</footer>
+</div>
+
+<script>
+(function(){
+var t=document.getElementById('tt'),h=document.documentElement,k='portfolio-theme';
+var s=localStorage.getItem(k);
+if(s){h.setAttribute('data-theme',s);u(s);}else{var p=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';h.setAttribute('data-theme',p);u(p);}
+t.addEventListener('click',function(){var c=h.getAttribute('data-theme'),n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem(k,n);u(n);});
+function u(x){t.textContent=x==='dark'?'☀️':'🌙';}
+})();
+</script>
 </body>
 </html>
