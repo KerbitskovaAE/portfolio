@@ -1,0 +1,64 @@
+<div class="value">ERP, LIMS, MES, CRM, автоматизация бизнес-процессов, интеграция систем, дашборды, отчетность</div>
+                </div>
+                <div class="skill-card">
+                    <div class="label">Business Analysis</div>
+                    <div class="value">Сбор требований, ТЗ, User Story, Acceptance Criteria, матрица рисков, КТК</div>
+                </div>
+                <div class="skill-card">
+                    <div class="label">Управление проектами</div>
+                    <div class="value">Agile, Scrum, Kanban, Waterfall, MS Project, Jira, Confluence</div>
+                </div>
+                <div class="skill-card">
+                    <div class="label">Предметная область</div>
+                    <div class="value">Строительство, девелопмент, модульное домостроение, производство, R&D</div>
+                </div>
+                <div class="skill-card">
+                    <div class="label">Качество</div>
+                    <div class="value">ISO 9001, ГОСТ, ТР ТС, CAPA, PDCA, бережливое производство</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Анна Кербицкова · Портфолио · 2026</p>
+        </footer>
+
+    </div>
+
+    <script>
+        (function () {
+            const toggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+            const STORAGE_KEY = 'portfolio-theme';
+
+            // Восстанавливаем сохранённую тему
+            const savedTheme = localStorage.getItem(STORAGE_KEY);
+            if (savedTheme) {
+                html.setAttribute('data-theme', savedTheme);
+                updateIcon(savedTheme);
+            } else {
+                // Если нет сохранённой — используем системную
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const initialTheme = prefersDark ? 'dark' : 'light';
+                html.setAttribute('data-theme', initialTheme);
+                updateIcon(initialTheme);
+            }
+
+            // Обработчик клика
+            toggle.addEventListener('click', function () {
+                const current = html.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', next);
+                localStorage.setItem(STORAGE_KEY, next);
+                updateIcon(next);
+            });
+
+            function updateIcon(theme) {
+                toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+        })();
+    </script>
+
+</body>
+</html>
