@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kerbitskovaae.github.io/portfolio/sitemap.xml
